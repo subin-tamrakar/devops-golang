@@ -11,18 +11,24 @@ pipeline {
 
         stage('Test') {
             steps {
+		sh 'go test ./...'
 		echo "testing go"
             }
         }
 
         stage('Build') {
             steps {
+		sh '''
+			mkdir -p test
+			go build -o test/calulator
+		'''
 		echo "building"
             }
         }
 
         stage('Archive') {
             steps {
+		archiveArtifacts artifacts:"test/calculator*", fingerprint:true
 			echo "archiving"
                 }
             }
