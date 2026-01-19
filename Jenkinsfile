@@ -20,7 +20,7 @@ pipeline {
             steps {
 		sh '''
 			mkdir -p test
-			go build -o test/calulator
+			go build -o test/calculator
 		'''
 		echo "building"
             }
