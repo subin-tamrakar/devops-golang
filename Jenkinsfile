@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GO_VERSION = "1.23.1"
+        GO_VERSION = "1.23.10"
         CGO_ENABLED = "0"   // Disable C bindings for reliable cross-compilation
     }
 
