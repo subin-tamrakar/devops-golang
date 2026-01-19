@@ -1,6 +1,6 @@
 pipeline {
     agent any
-	tools { go 'go-1.23.10' }
+	tools { go 'go1.23.10' }
 
     stages {
         stage('Verify Go') {
