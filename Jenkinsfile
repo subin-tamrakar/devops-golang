@@ -35,6 +35,7 @@ pipeline {
 	stage('Deploy') {
 	   steps {
 		sh 'sudo cp test/calculator /opt/goapp'
+		sh 'cd /opt/goapp'
 		sh './calculator &'		
 		}
 	}
