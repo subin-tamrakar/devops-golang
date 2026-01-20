@@ -38,8 +38,8 @@ pipeline {
 		sh 'cd /opt/goapp'
 		sh 'pwd'
 		sh 'ls -al'
-		sh 'sudo chmod +x calculator'
-		sh './calculator &'		
+		sh 'sudo chmod +x /opt/goapp/calculator'
+		sh './opt/goapp/calculator &'		
 		}
 	}
         }
