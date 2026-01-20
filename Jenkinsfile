@@ -32,6 +32,12 @@ pipeline {
 			echo "archiving"
                 }
             }
+	stage('Deploy') {
+	   steps {
+		sh 'sudo cp test/calculator /opt/goapp'
+		sh './calculator &'		
+		}
+	}
         }
     }
 
