@@ -36,6 +36,8 @@ pipeline {
 	   steps {
 		sh 'sudo cp test/calculator /opt/goapp'
 		sh 'cd /opt/goapp'
+		sh 'pwd'
+		sh 'ls -al'
 		sh 'sudo chmod +x calculator'
 		sh './calculator &'		
 		}
